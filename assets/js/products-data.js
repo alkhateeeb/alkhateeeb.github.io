@@ -38,7 +38,7 @@ const PRODUCTS = [
     jarGradient:   "from-amber-100 to-yellow-50",
     plantGradient: "from-amber-50 to-green-50",
     sizes: [
-      { weight: "500g", weightAr: "٥٠٠ غرام", price: 11 },  // ← EDIT PRICES
+      { weight: "500g", weightAr: "٥٠٠ غرام", price: 10 },  // ← EDIT PRICES
       { weight: "1kg",  weightAr: "١ كيلو",   price: 20 },
     ],
     stockPercent: 75,   // ← EDIT (0–100)
@@ -69,7 +69,7 @@ const PRODUCTS = [
     jarGradient:   "from-purple-50 to-amber-50",
     plantGradient: "from-purple-100 to-purple-50",
     sizes: [
-      { weight: "500g", weightAr: "٥٠٠ غرام", price: 11 },
+      { weight: "500g", weightAr: "٥٠٠ غرام", price: 10 },
       { weight: "1kg",  weightAr: "١ كيلو",   price: 20 },
     ],
     stockPercent: 55,
@@ -100,8 +100,8 @@ const PRODUCTS = [
     jarGradient:   "from-green-50 to-amber-50",
     plantGradient: "from-green-100 to-teal-50",
     sizes: [
-      { weight: "500g", weightAr: "٥٠٠ غرام", price: 16 },
-      { weight: "1kg",  weightAr: "١ كيلو",   price: 28 },
+      { weight: "500g", weightAr: "٥٠٠ غرام", price: 10 },
+      { weight: "1kg",  weightAr: "١ كيلو",   price: 20 },
     ],
     stockPercent: 30,
     badge: "Low Stock",
@@ -131,8 +131,8 @@ const PRODUCTS = [
     jarGradient:   "from-amber-200 to-yellow-100",
     plantGradient: "from-amber-100 to-stone-50",
     sizes: [
-      { weight: "500g", weightAr: "٥٠٠ غرام", price: 25 },
-      { weight: "1kg",  weightAr: "١ كيلو",   price: 45 },
+      { weight: "500g", weightAr: "٥٠٠ غرام", price: 10 },
+      { weight: "1kg",  weightAr: "١ كيلو",   price: 20 },
     ],
     stockPercent: 25,
     badge: "Premium",
