@@ -155,7 +155,7 @@
       </div>
       <div>
         <div class="text-3xl mb-2 select-none">👨‍🌾</div>
-        <div class="font-semibold text-sm">Family-Run Since 1985</div>
+        <div class="font-semibold text-sm">Family-Run Since 2015</div>
         <div class="text-xs text-stone-400 mt-1">Three generations of beekeepers</div>
       </div>
       <div>
@@ -227,7 +227,7 @@
           </div>
           <p class="text-xs leading-relaxed text-stone-500">
             Premium single-source honey from Jordan's mountain highlands.
-            Raw, natural, and honest since 1985.
+            Raw, natural, and honest since 2015.
           </p>
         </div>
 
@@ -244,7 +244,7 @@
         <div>
           <h4 class="font-semibold text-white text-sm mb-4">Get in Touch</h4>
           <div class="space-y-2 text-xs text-stone-500">
-            <div>📱 WhatsApp: +962 7X XXX XXXX</div>
+            <div>📱 WhatsApp: +962 79 148 1240</div>
             <div>📧 info@alkhateebapiary.jo</div>
             <div>📍 Amman, Jordan</div>
           </div>
@@ -262,6 +262,7 @@
   <script>
     var homeGrid     = document.getElementById("home-products");
     var homeSizeState = {};
+    var IMG_BASE      = "../assets/images/";
 
     function setHomeSize(id, idx) {
       homeSizeState[id] = idx;
@@ -284,13 +285,9 @@
 
       homeGrid.innerHTML += `
         <div class="product-card bg-white rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
-          <div class="gallery-split relative">
-            <div class="gallery-panel gallery-panel--jar bg-gradient-to-br ${p.jarGradient}">
-              <span class="text-6xl select-none drop-shadow-sm">🍯</span>
-            </div>
-            <div class="gallery-panel bg-gradient-to-br ${p.plantGradient}">
-              <span class="text-5xl select-none">${p.mainFlowerEmoji}</span>
-            </div>
+          <div class="relative overflow-hidden bg-stone-100" style="height:180px">
+            <img src="${IMG_BASE}${p.images[0]}" alt="${p.name}"
+                 class="w-full h-full object-cover" />
             <span class="absolute top-3 left-3 text-xs font-semibold px-2.5 py-0.5 rounded-full
                          ${getBadgeStyle(p.badgeColor)}">${p.badge}</span>
           </div>

@@ -45,6 +45,7 @@ const PRODUCTS = [
     badge: "Bestseller",
     badgeAr: "الأكثر مبيعاً",
     badgeColor: "amber",
+    images: ["spring_1.jpg", "spring_2.jpg", "spring_3.jpg", "spring_5.jpg"],
   },
   {
     id: 2,
@@ -76,6 +77,7 @@ const PRODUCTS = [
     badge: "Seasonal",
     badgeAr: "موسمي",
     badgeColor: "purple",
+    images: ["Centaurea_calcitrapa_1.jpg", "Centaurea_calcitrapa_2.jpg", "Centaurea_calcitrapa_3.jpg"],
   },
   {
     id: 3,
@@ -107,6 +109,7 @@ const PRODUCTS = [
     badge: "Low Stock",
     badgeAr: "مخزون محدود",
     badgeColor: "red",
+    images: ["eycalptus_1.jpg", "eycalptus_2.jpg", "eycalptus_3.jpg", "eycalptus_affect_1.jpg"],
   },
   {
     id: 4,
@@ -138,6 +141,7 @@ const PRODUCTS = [
     badge: "Premium",
     badgeAr: "فاخر",
     badgeColor: "gold",
+    images: ["Ballota_1.jpg", "Ballota_2.jpg", "Ballota_3.jpg"],
   },
 ];
 

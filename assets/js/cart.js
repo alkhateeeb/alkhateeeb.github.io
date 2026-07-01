@@ -5,7 +5,7 @@
 
 const CART_KEY = "alkhateeb_cart";
 // ⚠️ Replace with the real WhatsApp number (Jordan international format, no + sign)
-const WHATSAPP_NUMBER = "962799999999";
+const WHATSAPP_NUMBER = "962791481240";
 
 // ─── State ────────────────────────────────────────────────────────────────────
 

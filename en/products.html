@@ -135,7 +135,7 @@
           </div>
           <p class="text-xs leading-relaxed text-stone-500">
             Premium single-source honey from Jordan's mountain highlands.
-            Raw, natural, and honest since 1985.
+            Raw, natural, and honest since 2015.
           </p>
         </div>
         <div>
@@ -150,7 +150,7 @@
         <div>
           <h4 class="font-semibold text-white text-sm mb-4">Get in Touch</h4>
           <div class="space-y-2 text-xs text-stone-500">
-            <div>📱 WhatsApp: +962 7X XXX XXXX</div>
+            <div>📱 WhatsApp: +962 79 148 1240</div>
             <div>📧 info@alkhateebapiary.jo</div>
             <div>📍 Amman, Jordan</div>
           </div>
@@ -168,6 +168,17 @@
   <script>
     var qtyState  = {};
     var sizeState = {};
+    var IMG_BASE  = "../assets/images/";
+
+    function switchImg(id, src, thumbEl) {
+      var main = document.getElementById('gallery-main-' + id);
+      if (main) main.src = src;
+      var strip = thumbEl.parentElement;
+      strip.querySelectorAll('img').forEach(function(t) {
+        t.className = 'product-thumb shrink-0 w-16 h-12 object-cover rounded cursor-pointer opacity-60 hover:opacity-100 transition';
+      });
+      thumbEl.className = 'product-thumb shrink-0 w-16 h-12 object-cover rounded cursor-pointer ring-2 ring-amber-400 transition';
+    }
 
     function adjustQty(id, delta) {
       qtyState[id] = Math.max(1, (qtyState[id] || 1) + delta);
@@ -218,24 +229,24 @@
           + '</button>';
       }).join('');
 
+      var thumbsHtml = '<div class="flex gap-1.5 px-2 py-2 bg-stone-50 border-b border-stone-100 overflow-x-auto">'
+        + p.images.map(function(img, i) {
+            var cls = i === 0
+              ? 'product-thumb shrink-0 w-16 h-12 object-cover rounded cursor-pointer ring-2 ring-amber-400 transition'
+              : 'product-thumb shrink-0 w-16 h-12 object-cover rounded cursor-pointer opacity-60 hover:opacity-100 transition';
+            return '<img src="' + IMG_BASE + img + '" alt="' + p.name + '" class="' + cls + '" onclick="switchImg(' + p.id + ',\'' + IMG_BASE + img + '\',this)">';
+          }).join('')
+        + '</div>';
+
       grid.innerHTML += `
         <div class="product-card bg-white rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
 
-          <!-- Gallery Split: jar | main flower -->
-          <div class="gallery-split">
-            <div class="gallery-panel gallery-panel--jar bg-gradient-to-br ${p.jarGradient}">
-              <div class="text-center">
-                <span class="text-7xl select-none drop-shadow-md block">🍯</span>
-                <span class="text-xs text-stone-500 mt-2 block font-medium">Honey Jar</span>
-              </div>
-            </div>
-            <div class="gallery-panel bg-gradient-to-br ${p.plantGradient}">
-              <div class="text-center">
-                <span class="text-6xl select-none block">${p.mainFlowerEmoji}</span>
-                <span class="text-xs text-stone-500 mt-2 block font-medium leading-tight">${p.mainFlower}</span>
-              </div>
-            </div>
+          <!-- Image Gallery -->
+          <div class="relative overflow-hidden bg-stone-100" style="height:220px">
+            <img id="gallery-main-${p.id}" src="${IMG_BASE}${p.images[0]}" alt="${p.name}"
+                 class="w-full h-full object-cover" />
           </div>
+          ${thumbsHtml}
 
           <!-- Product Info -->
           <div class="p-6">
