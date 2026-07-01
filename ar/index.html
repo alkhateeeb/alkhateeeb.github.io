@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مناحل الخطيب — أعسال أردنية فاخرة</title>
+  <meta name="description" content="عسل خام طبيعي أحادي المصدر من مرتفعات الأردن. مباشرة من مناحل الخطيب إلى مائدتك." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="bg-amber-50 text-stone-900">
+
+  <!-- ════════════════════════════ التنقل ════════════════════════════ -->
+  <nav class="bg-amber-900 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <!-- الشعار -->
+      <a href="index.html" class="flex items-center hover:opacity-90 transition">
+        <img src="../assets/images/logo-white.jpeg" alt="منحل الخطيب"
+             class="h-11 w-auto object-contain rounded" />
+      </a>
+
+      <!-- روابط الشاشة الكبيرة -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium flex-row-reverse">
+        <a href="../index.html"
+           class="text-amber-200 border border-amber-600/60 hover:border-amber-300
+                  px-3 py-1.5 rounded-full text-xs transition">English</a>
+        <a href="cart.html"
+           class="relative flex items-center gap-2 bg-amber-600 hover:bg-amber-500
+                  transition px-4 py-2 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707
+                 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          السلة
+          <span id="cart-badge"
+                class="hidden absolute -top-1.5 -left-1.5 bg-white text-amber-800 text-xs
+                       font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </a>
+        <a href="products.html" class="hover:text-amber-300 transition">محاصيلنا</a>
+        <a href="about.html"   class="hover:text-amber-300 transition">من نحن</a>
+        <a href="index.html"   class="text-amber-200 border-b border-amber-400 pb-0.5">الرئيسية</a>
+      </div>
+
+      <!-- زر القائمة للجوال -->
+      <button onclick="document.getElementById('mob-nav').classList.toggle('hidden')"
+              class="md:hidden p-1 text-white" aria-label="فتح القائمة">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- قائمة الجوال -->
+    <div id="mob-nav"
+         class="hidden md:hidden px-5 pb-4 pt-3 space-y-3 text-sm border-t border-amber-700">
+      <a href="index.html"    class="block hover:text-amber-300 transition">الرئيسية</a>
+      <a href="about.html"   class="block hover:text-amber-300 transition">من نحن</a>
+      <a href="products.html" class="block hover:text-amber-300 transition">محاصيلنا</a>
+      <a href="cart.html"    class="block hover:text-amber-300 transition">السلة والطلب</a>
+      <a href="../index.html" class="block hover:text-amber-300 transition">🌐 English</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════ الهيرو ════════════════════════════ -->
+  <section class="relative bg-gradient-to-bl from-amber-900 via-amber-800 to-amber-700
+                  text-white overflow-hidden">
+    <div class="absolute inset-0 hex-bg opacity-100 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-5 py-24 md:py-36">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- النص -->
+        <div>
+          <div class="inline-flex items-center gap-2 bg-white/10 border border-amber-400/30
+                      px-4 py-1.5 rounded-full text-amber-200 text-sm mb-8">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse inline-block"></span>
+            موسم ربيع 2026 — مفتوح الآن
+          </div>
+
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-5 tracking-tight">
+            عسل أصيل من<br>
+            <span class="text-amber-300">جبال الأردن</span>
+          </h1>
+
+          <p class="text-amber-100/75 leading-relaxed mb-10 max-w-md text-sm">
+            عسل خام أحادي المصدر — نحصده من مناحلنا من جبال ووديان الأردن.
+            لا إضافات، لا خلط. فقط عسل صادق وأصيل.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="products.html"
+               class="bg-white text-amber-800 font-bold px-8 py-3.5 rounded-full
+                      hover:bg-amber-100 transition shadow-lg text-sm">
+              ← تسوّق هذا الموسم
+            </a>
+            <a href="about.html"
+               class="border border-white/40 text-white px-8 py-3.5 rounded-full
+                      hover:bg-white/10 transition text-sm">
+              قصتنا
+            </a>
+          </div>
+        </div>
+
+        <!-- الزينة البصرية -->
+        <div class="hidden md:flex justify-center items-center">
+          <div class="relative w-72 h-72">
+            <div class="absolute inset-0 rounded-full bg-amber-400/10 animate-pulse"></div>
+            <div class="absolute inset-6 rounded-full bg-amber-400/10"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+              <span class="text-8xl drop-shadow-lg select-none">🍯</span>
+              <span class="text-amber-200 text-xs font-medium tracking-widest">
+                منحل الخطيب
+              </span>
+              <span class="text-amber-300 text-xs">Alkhateeb Apiary · Since 1985</span>
+            </div>
+            <span class="absolute top-5 left-5 text-4xl opacity-40 -rotate-12 animate-bounce
+                         select-none">🐝</span>
+            <span class="absolute bottom-6 right-6 text-3xl opacity-30 rotate-12
+                         select-none">🌸</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ شريط الموسم ══════════════════════════ -->
+  <div class="bg-amber-400 text-amber-900 text-center py-3 px-4 text-sm font-medium">
+    🌸 <strong>ربيع 2026:</strong> عسل زهور الجبال والقنطريون طازج —
+    اطلب قبل نفاد الكمية.
+    <a href="products.html" class="mr-1 underline font-bold">تحقق من التوفر ←</a>
+  </div>
+
+  <!-- ════════════════════════════ شريط الثقة ══════════════════════════ -->
+  <section class="bg-white py-12 px-5 border-b border-amber-100">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl mb-2 select-none">🌿</div>
+        <div class="font-semibold text-sm">١٠٠٪ خام وطبيعي</div>
+        <div class="text-xs text-stone-400 mt-1">لا تسخين، لا تصفية، لا إضافات</div>
+      </div>
+      <div>
+        <div class="text-3xl mb-2 select-none">📍</div>
+        <div class="font-semibold text-sm">مصدر واحد</div>
+        <div class="text-xs text-stone-400 mt-1">كل صنف من منحل بعينه</div>
+      </div>
+      <div>
+        <div class="text-3xl mb-2 select-none">👨‍🌾</div>
+        <div class="font-semibold text-sm">عائلي منذ 1985</div>
+        <div class="text-xs text-stone-400 mt-1">ثلاثة أجيال من النحالين</div>
+      </div>
+      <div>
+        <div class="text-3xl mb-2 select-none">📦</div>
+        <div class="font-semibold text-sm">توصيل في أنحاء الأردن</div>
+        <div class="text-xs text-stone-400 mt-1">اطلب عبر واتساب، يصلك لبيتك</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ المنتجات المميزة ═══════════════════════ -->
+  <section class="py-16 px-5">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-12">
+        <p class="text-amber-600 text-xs font-semibold uppercase tracking-widest mb-2">
+          موسم 2026
+        </p>
+        <h2 class="text-3xl font-bold text-stone-900">أصناف هذا الموسم</h2>
+        <p class="text-stone-400 text-sm mt-2 max-w-md mx-auto">
+          كل صنف يُحصد بشكل منفصل ويُعبّأ كمنتج أحادي المصدر حقيقي.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="home-products">
+        <!-- تُعرض بواسطة JS -->
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="products.html"
+           class="inline-block bg-amber-700 hover:bg-amber-600 text-white font-semibold
+                  px-8 py-3 rounded-full transition shadow-md text-sm">
+          ← عرض الكتالوج الكامل
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ تشويق "من نحن" ════════════════════════ -->
+  <section class="bg-gradient-to-l from-amber-900 to-amber-800 text-white py-20 px-5">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="text-5xl mb-6 select-none">🏔️🐝</div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-5">
+        من جبال الأردن<br>إلى مائدتك
+      </h2>
+      <p class="text-amber-200 leading-relaxed max-w-2xl mx-auto text-sm md:text-base mb-8">
+        منذ أكثر من ٤٠ عاماً تحافظ عائلة الخطيب على مناحلها في أنقى المناطق الجبلية
+        الأردنية — من غابات السنديان في عجلون إلى سفوح الأزهار البرية في الشمال.
+        كل جرة تحكي قصة مكان بعينه وموسم بعينه.
+      </p>
+      <a href="about.html"
+         class="inline-block border border-amber-400 text-amber-300 hover:bg-amber-800
+                px-8 py-3 rounded-full transition text-sm font-medium">
+        اقرأ قصتنا كاملة ←
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ الفوتر ════════════════════════════ -->
+  <footer class="bg-stone-950 text-stone-400 pt-12 pb-8 px-5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+
+        <div>
+          <div class="mb-4">
+            <img src="../assets/images/logo-white.jpeg" alt="منحل الخطيب"
+                 class="h-12 w-auto object-contain rounded" />
+          </div>
+          <p class="text-xs leading-relaxed text-stone-500">
+            عسل فاخر أحادي المصدر من مرتفعات الأردن.
+            خام، طبيعي، وصادق منذ عام 1985.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-sm mb-4">روابط سريعة</h4>
+          <div class="space-y-2 text-xs">
+            <a href="index.html"    class="block hover:text-amber-400 transition">الرئيسية</a>
+            <a href="about.html"   class="block hover:text-amber-400 transition">من نحن</a>
+            <a href="products.html" class="block hover:text-amber-400 transition">محاصيلنا</a>
+            <a href="cart.html"    class="block hover:text-amber-400 transition">السلة والطلب</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-sm mb-4">تواصل معنا</h4>
+          <div class="space-y-2 text-xs text-stone-500">
+            <div>📱 واتساب: +962 7X XXX XXXX</div>
+            <div>📧 info@alkhateebapiary.jo</div>
+            <div>📍 عمّان، الأردن</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="border-t border-stone-800 pt-6 text-xs text-center text-stone-600">
+        © 2026 منحل الخطيب · Alkhateeb Apiary · جميع الحقوق محفوظة
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════ السكريبت ════════════════════════════ -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script>
+    var homeGrid      = document.getElementById("home-products");
+    var homeSizeState = {};
+
+    function setHomeSize(id, idx) {
+      homeSizeState[id] = idx;
+      var p = PRODUCTS.find(function (x) { return x.id === id; });
+      if (!p) return;
+      for (var i = 0; i < p.sizes.length; i++) {
+        var btn = document.getElementById("hs-" + id + "-" + i);
+        if (!btn) continue;
+        btn.className = i === idx
+          ? "flex-1 border rounded-lg py-1.5 text-xs font-semibold text-center border-amber-400 bg-amber-50 text-amber-700 ring-1 ring-amber-300 transition"
+          : "flex-1 border rounded-lg py-1.5 text-xs font-semibold text-center border-stone-200 bg-white text-stone-600 hover:border-amber-300 transition";
+      }
+    }
+
+    PRODUCTS.forEach(function (p) {
+      homeSizeState[p.id] = 0;
+      var avail = getAvailability(p.stockPercent);
+      var pct   = avail.percent.toFixed(0);
+      var cryst = getCrystallizationStyle(p.crystallization);
+
+      homeGrid.innerHTML += `
+        <div class="product-card bg-white rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+          <div class="gallery-split relative">
+            <div class="gallery-panel gallery-panel--jar bg-gradient-to-bl ${p.jarGradient}">
+              <span class="text-6xl select-none drop-shadow-sm">🍯</span>
+            </div>
+            <div class="gallery-panel bg-gradient-to-bl ${p.plantGradient}">
+              <span class="text-5xl select-none">${p.mainFlowerEmoji}</span>
+            </div>
+            <span class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-0.5 rounded-full
+                         ${getBadgeStyle(p.badgeColor)}">${p.badgeAr}</span>
+          </div>
+
+          <div class="p-4">
+            <h3 class="font-bold text-stone-900 mb-1 text-sm">${p.nameAr}</h3>
+
+            <!-- شارة التبلور -->
+            <div class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full mb-3
+                        border ${cryst.bgColor} ${cryst.borderColor} ${cryst.textColor}">
+              <span>${cryst.icon}</span><span>${cryst.labelAr}</span>
+            </div>
+
+            <!-- التوفر -->
+            <div class="mb-3">
+              <div class="flex justify-between items-center text-xs mb-1.5">
+                <span class="text-stone-400">التوفر</span>
+                <span class="${avail.textColor} font-medium flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full ${avail.dotColor} inline-block
+                               ${avail.pulse ? 'animate-pulse' : ''}"></span>
+                  ${avail.labelAr}
+                </span>
+              </div>
+              <div class="availability-track">
+                <div class="availability-fill ${avail.barColor}" style="width:${pct}%"></div>
+                <div class="availability-knob ${avail.barColor}" style="right:${pct}%;left:auto;transform:translate(50%,-50%)"></div>
+              </div>
+            </div>
+
+            <!-- اختيار الحجم -->
+            <div class="flex gap-1.5 mb-3">
+              ${p.sizes.map(function (s, i) {
+                var cls = i === 0
+                  ? "flex-1 border rounded-lg py-1.5 text-xs font-semibold text-center border-amber-400 bg-amber-50 text-amber-700 ring-1 ring-amber-300 transition"
+                  : "flex-1 border rounded-lg py-1.5 text-xs font-semibold text-center border-stone-200 bg-white text-stone-600 hover:border-amber-300 transition";
+                return '<button id="hs-' + p.id + '-' + i + '" onclick="setHomeSize(' + p.id + ',' + i + ')" class="' + cls + '">'
+                  + s.weightAr + '<br><span class="font-extrabold text-amber-700">' + s.price + ' دينار</span></button>';
+              }).join('')}
+            </div>
+
+            <button onclick="addToCart(${p.id}, 1, homeSizeState[${p.id}] || 0)"
+                    class="w-full bg-amber-600 hover:bg-amber-500 active:scale-95 text-white
+                           text-xs font-semibold py-2 rounded-full transition">
+              + أضف للسلة
+            </button>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
