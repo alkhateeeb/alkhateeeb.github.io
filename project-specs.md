@@ -36,8 +36,3 @@ Each product listing must dynamically or statically render:
     * Mobile Number
     * Delivery Address & Location Drop
 * **Phase 1 Order Processing:** A "Submit Order" button that compiles the cart data and customer details, sending it directly via a structured message link (e.g., WhatsApp pre-filled link) to handle logistics manually.
-
-TODO: 
-We need to add Crystallization rate
-We need to add main flower that affect this honey 
-We need to add 1 kilo and 1/2 kilo

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>السلة والطلب — منحل الخطيب</title>
-  <meta name="description" content="راجع طلبك وأرسله عبر واتساب — منحل الخطيب." />
+  <title>Cart &amp; Order — Alkhateeb Apiary</title>
+  <meta name="description" content="Review your honey selection and submit your order via WhatsApp." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body class="bg-amber-50 text-stone-900">
 
-  <!-- ════════════════════════════ التنقل ════════════════════════════ -->
+  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
   <nav class="bg-amber-900 text-white sticky top-0 z-50 shadow-lg">
     <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center hover:opacity-90 transition">
-        <img src="assets/images/logo-white.jpeg" alt="منحل الخطيب"
+        <img src="../assets/images/logo-white.jpeg" alt="Alkhateeb Apiary"
              class="h-11 w-auto object-contain rounded" />
       </a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium flex-row-reverse">
-        <a href="en/cart.html"
-           class="text-amber-200 border border-amber-600/60 hover:border-amber-300
-                  px-3 py-1.5 rounded-full text-xs transition">English</a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"    class="hover:text-amber-300 transition">Home</a>
+        <a href="about.html"   class="hover:text-amber-300 transition">About Us</a>
+        <a href="products.html" class="hover:text-amber-300 transition">Our Harvests</a>
         <a href="cart.html"
            class="relative flex items-center gap-2 bg-amber-600 hover:bg-amber-500
                   transition px-4 py-2 rounded-full text-amber-200 border-b border-amber-400">
@@ -30,17 +30,17 @@
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707
                  1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
           </svg>
-          السلة
+          Cart
           <span id="cart-badge"
-                class="hidden absolute -top-1.5 -left-1.5 bg-white text-amber-800 text-xs
+                class="hidden absolute -top-1.5 -right-1.5 bg-white text-amber-800 text-xs
                        font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
         </a>
-        <a href="products.html" class="hover:text-amber-300 transition">محاصيلنا</a>
-        <a href="about.html"   class="hover:text-amber-300 transition">من نحن</a>
-        <a href="index.html"   class="hover:text-amber-300 transition">الرئيسية</a>
+        <a href="../cart.html"
+           class="text-amber-200 border border-amber-600/60 hover:border-amber-300
+                  px-3 py-1.5 rounded-full text-xs transition arabic">عربي</a>
       </div>
       <button onclick="document.getElementById('mob-nav').classList.toggle('hidden')"
-              class="md:hidden p-1 text-white" aria-label="فتح القائمة">
+              class="md:hidden p-1 text-white" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,130 +50,137 @@
     </div>
     <div id="mob-nav"
          class="hidden md:hidden px-5 pb-4 pt-3 space-y-3 text-sm border-t border-amber-700">
-      <a href="index.html"    class="block hover:text-amber-300 transition">الرئيسية</a>
-      <a href="about.html"   class="block hover:text-amber-300 transition">من نحن</a>
-      <a href="products.html" class="block hover:text-amber-300 transition">محاصيلنا</a>
-      <a href="cart.html"    class="block hover:text-amber-300 transition">السلة والطلب</a>
-      <a href="en/cart.html"  class="block hover:text-amber-300 transition">🌐 English</a>
+      <a href="index.html"    class="block hover:text-amber-300 transition">Home</a>
+      <a href="about.html"   class="block hover:text-amber-300 transition">About Us</a>
+      <a href="products.html" class="block hover:text-amber-300 transition">Our Harvests</a>
+      <a href="cart.html"    class="block hover:text-amber-300 transition">Cart &amp; Order</a>
+      <a href="../cart.html"  class="block hover:text-amber-300 transition arabic">🌐 عربي</a>
     </div>
   </nav>
 
-  <!-- ════════════════════════════ رأس الصفحة ════════════════════════ -->
-  <section class="bg-gradient-to-l from-amber-900 to-amber-800 text-white py-10 px-5">
+  <!-- ═══════════════════════════ PAGE HEADER ══════════════════════════ -->
+  <section class="bg-gradient-to-r from-amber-900 to-amber-800 text-white py-10 px-5">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl font-extrabold">سلتك</h1>
+      <h1 class="text-3xl font-extrabold">Your Cart</h1>
       <p class="text-amber-300 text-sm mt-1">
-        راجع طلبك، أدخل بياناتك، وأرسله عبر واتساب.
+        Review your order, fill in your details, and submit via WhatsApp.
       </p>
     </div>
   </section>
 
-  <!-- ════════════════════════════ المحتوى الرئيسي ═══════════════════ -->
+  <!-- ═══════════════════════════ MAIN CONTENT ═════════════════════════ -->
   <main class="py-10 px-5">
     <div class="max-w-4xl mx-auto">
 
-      <!-- حالة السلة الفارغة -->
+      <!-- ── Empty State ── -->
       <div id="empty-cart" class="hidden text-center py-20">
         <div class="text-6xl mb-4 select-none">🛒</div>
-        <h2 class="text-xl font-bold text-stone-700 mb-2">سلتك فارغة</h2>
+        <h2 class="text-xl font-bold text-stone-700 mb-2">Your cart is empty</h2>
         <p class="text-stone-400 text-sm mb-6">
-          تصفّح أصناف العسل وأضف ما يعجبك.
+          Browse our honey varieties and add your favourites.
         </p>
         <a href="products.html"
            class="inline-block bg-amber-600 hover:bg-amber-500 text-white font-semibold
                   px-7 py-3 rounded-full transition shadow-md text-sm">
-          ← تسوّق محاصيلنا
+          Shop Our Harvests →
         </a>
       </div>
 
-      <!-- السلة + نموذج الطلب -->
+      <!-- ── Cart + Checkout ── -->
       <div id="cart-content" class="hidden grid lg:grid-cols-5 gap-8">
 
-        <!-- عمود المنتجات (أوسع) -->
+        <!-- Cart Items Column (wider) -->
         <div class="lg:col-span-3 space-y-4">
-          <h2 class="font-bold text-stone-800 text-lg mb-1">منتجات الطلب</h2>
-          <div id="cart-items" class="space-y-3"></div>
+          <h2 class="font-bold text-stone-800 text-lg mb-1">Order Items</h2>
+          <div id="cart-items" class="space-y-3">
+            <!-- Rendered by JS -->
+          </div>
+
           <div class="pt-2">
             <a href="products.html"
                class="text-amber-700 hover:text-amber-600 text-sm font-medium
                       flex items-center gap-1 transition">
-              ← متابعة التسوق
+              ← Continue shopping
             </a>
           </div>
         </div>
 
-        <!-- ملخص الطلب + نموذج -->
+        <!-- Order Summary + Checkout Form -->
         <div class="lg:col-span-2 space-y-5">
 
-          <!-- ملخص الطلب -->
+          <!-- Order Summary -->
           <div class="bg-white rounded-2xl border border-amber-100 shadow-sm p-5">
-            <h2 class="font-bold text-stone-800 mb-4">ملخص الطلب</h2>
+            <h2 class="font-bold text-stone-800 mb-4">Order Summary</h2>
 
-            <div id="summary-lines" class="space-y-2 text-sm mb-4"></div>
+            <div id="summary-lines" class="space-y-2 text-sm mb-4">
+              <!-- Rendered by JS -->
+            </div>
 
             <div class="border-t border-stone-100 pt-3 flex justify-between items-center">
-              <span id="cart-total" class="text-2xl font-extrabold text-amber-700">0 دينار</span>
-              <span class="font-bold text-stone-800">الإجمالي</span>
+              <span class="font-bold text-stone-800">Total</span>
+              <span id="cart-total"
+                    class="text-2xl font-extrabold text-amber-700">0 JOD</span>
             </div>
 
             <p class="text-xs text-stone-400 mt-3 leading-relaxed">
-              سيتم تأكيد رسوم التوصيل من فريقنا بعد إرسال الطلب.
+              Delivery fee to be confirmed by our team after you submit your order.
             </p>
           </div>
 
-          <!-- نموذج البيانات -->
+          <!-- Checkout Form -->
           <div class="bg-white rounded-2xl border border-amber-100 shadow-sm p-5">
-            <h2 class="font-bold text-stone-800 mb-4">بياناتك</h2>
+            <h2 class="font-bold text-stone-800 mb-4">Your Details</h2>
 
             <form id="checkout-form" onsubmit="handleSubmit(event)" novalidate>
 
               <div class="mb-4">
                 <label class="block text-xs font-semibold text-stone-600 mb-1.5"
                        for="cust-name">
-                  الاسم الكامل <span class="text-red-400">*</span>
+                  Full Name <span class="text-red-400">*</span>
                 </label>
-                <input id="cust-name" type="text" placeholder="مثال: أحمد الخطيب"
+                <input id="cust-name" type="text" placeholder="e.g. Ahmad Al-Khateeb"
                        autocomplete="name"
                        class="w-full border border-stone-200 rounded-xl px-4 py-2.5
-                              text-sm bg-white transition" />
+                              text-sm bg-white transition"/>
                 <p id="err-name" class="text-xs text-red-500 mt-1 hidden">
-                  يرجى إدخال اسمك الكامل.
+                  Please enter your full name.
                 </p>
               </div>
 
               <div class="mb-4">
                 <label class="block text-xs font-semibold text-stone-600 mb-1.5"
                        for="cust-mobile">
-                  رقم الجوال <span class="text-red-400">*</span>
+                  Mobile Number <span class="text-red-400">*</span>
                 </label>
                 <input id="cust-mobile" type="tel"
                        placeholder="+962 7X XXX XXXX"
-                       autocomplete="tel" dir="ltr"
+                       autocomplete="tel"
                        class="w-full border border-stone-200 rounded-xl px-4 py-2.5
-                              text-sm bg-white transition" />
+                              text-sm bg-white transition"/>
                 <p id="err-mobile" class="text-xs text-red-500 mt-1 hidden">
-                  يرجى إدخال رقم جوال صحيح.
+                  Please enter a valid mobile number.
                 </p>
               </div>
 
               <div class="mb-5">
                 <label class="block text-xs font-semibold text-stone-600 mb-1.5"
                        for="cust-address">
-                  عنوان التوصيل <span class="text-red-400">*</span>
+                  Delivery Address <span class="text-red-400">*</span>
                 </label>
                 <textarea id="cust-address" rows="3"
-                          placeholder="المدينة، المنطقة، الشارع، رقم البناية / الشقة..."
+                          placeholder="City, area, street, building / apartment number..."
                           class="w-full border border-stone-200 rounded-xl px-4 py-2.5
                                  text-sm bg-white resize-none transition"></textarea>
                 <p id="err-address" class="text-xs text-red-500 mt-1 hidden">
-                  يرجى إدخال عنوان التوصيل.
+                  Please enter your delivery address.
                 </p>
               </div>
 
-              <!-- زر الإرسال عبر واتساب -->
+              <!-- WhatsApp submit -->
               <button type="submit"
                       class="btn-whatsapp w-full flex items-center justify-center gap-3
                              font-bold py-3.5 rounded-xl text-sm shadow-md">
+                <!-- WhatsApp icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                      class="w-5 h-5 shrink-0">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15
@@ -193,11 +200,11 @@
                     -3.694 1.013 1.013-3.694-.212-.356A9.712 9.712 0 012.25 12C2.25 6.615
                     6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
                 </svg>
-                إرسال الطلب عبر واتساب
+                Submit Order via WhatsApp
               </button>
 
               <p class="text-xs text-stone-400 text-center mt-3 leading-relaxed">
-                سيفتح واتساب مع تفاصيل طلبك جاهزة. أرسل الرسالة لتأكيد الطلب.
+                This will open WhatsApp with your order pre-filled. Send the message to confirm.
               </p>
 
             </form>
@@ -209,102 +216,76 @@
     </div>
   </main>
 
-  <!-- ════════════════════════════ مودال التأكيد ══════════════════════ -->
+  <!-- ═══════════════════════════ ORDER SENT MODAL ══════════════════════ -->
   <div id="order-modal"
        class="hidden fixed inset-0 bg-black/50 z-[9999] flex items-center justify-center p-5">
-    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-8 text-center animate-fade-up">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-8 text-center
+                animate-fade-up">
       <div class="text-5xl mb-4 select-none">🎉🍯</div>
-      <h3 class="text-xl font-bold text-stone-900 mb-2">تم إرسال الطلب!</h3>
+      <h3 class="text-xl font-bold text-stone-900 mb-2">Order Sent!</h3>
       <p class="text-stone-500 text-sm leading-relaxed mb-6">
-        تم إرسال تفاصيل طلبك إلى واتساب. سيتواصل فريقنا معك قريباً لتأكيد الطلب وترتيب التوصيل.
-        شكراً لك!
+        Your order details have been sent to WhatsApp. Our team will confirm your order and
+        delivery details shortly. Thank you!
       </p>
       <div class="flex flex-col gap-3">
         <button onclick="confirmClearCart()"
                 class="bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 rounded-xl
                        transition text-sm">
-          مسح السلة
+          Clear My Cart
         </button>
         <button onclick="closeModal()"
                 class="border border-stone-200 text-stone-600 hover:bg-stone-50 font-medium
                        py-2.5 rounded-xl transition text-sm">
-          إبقاء السلة
+          Keep Cart Open
         </button>
       </div>
     </div>
   </div>
 
-  <!-- ════════════════════════════ الفوتر ════════════════════════════ -->
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════════ -->
   <footer class="bg-stone-950 text-stone-400 pt-12 pb-8 px-5 mt-10">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-3 gap-10 mb-10">
         <div>
           <div class="mb-4">
-            <img src="assets/images/logo-white.jpeg" alt="منحل الخطيب"
+            <img src="../assets/images/logo-white.jpeg" alt="Alkhateeb Apiary"
                  class="h-12 w-auto object-contain rounded" />
           </div>
           <p class="text-xs leading-relaxed text-stone-500">
-            عسل فاخر أحادي المصدر من مرتفعات الأردن.
-            خام، طبيعي، وصادق منذ عام 1985.
+            Premium single-source honey from Jordan's mountain highlands.
+            Raw, natural, and honest since 1985.
           </p>
         </div>
         <div>
-          <h4 class="font-semibold text-white text-sm mb-4">روابط سريعة</h4>
+          <h4 class="font-semibold text-white text-sm mb-4">Quick Links</h4>
           <div class="space-y-2 text-xs">
-            <a href="index.html"    class="block hover:text-amber-400 transition">الرئيسية</a>
-            <a href="about.html"   class="block hover:text-amber-400 transition">من نحن</a>
-            <a href="products.html" class="block hover:text-amber-400 transition">محاصيلنا</a>
-            <a href="cart.html"    class="block hover:text-amber-400 transition">السلة والطلب</a>
+            <a href="index.html"    class="block hover:text-amber-400 transition">Home</a>
+            <a href="about.html"   class="block hover:text-amber-400 transition">About Us</a>
+            <a href="products.html" class="block hover:text-amber-400 transition">Our Harvests</a>
+            <a href="cart.html"    class="block hover:text-amber-400 transition">Cart &amp; Order</a>
           </div>
         </div>
         <div>
-          <h4 class="font-semibold text-white text-sm mb-4">تواصل معنا</h4>
+          <h4 class="font-semibold text-white text-sm mb-4">Get in Touch</h4>
           <div class="space-y-2 text-xs text-stone-500">
-            <div>📱 واتساب: +962 7X XXX XXXX</div>
+            <div>📱 WhatsApp: +962 7X XXX XXXX</div>
             <div>📧 info@alkhateebapiary.jo</div>
-            <div>📍 عمّان، الأردن</div>
+            <div>📍 Amman, Jordan</div>
           </div>
         </div>
       </div>
       <div class="border-t border-stone-800 pt-6 text-xs text-center text-stone-600">
-        © 2026 منحل الخطيب · Alkhateeb Apiary · جميع الحقوق محفوظة
+        © 2026 Alkhateeb Apiary · <span class="arabic">منحل الخطيب</span> · All Rights Reserved
       </div>
     </div>
   </footer>
 
-  <!-- ════════════════════════════ السكريبت ════════════════════════════ -->
-  <script src="assets/js/products-data.js"></script>
-  <script src="assets/js/cart.js"></script>
+  <!-- ═══════════════════════════ SCRIPTS ══════════════════════════════ -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
   <script>
 
-    /* ── رسالة واتساب بالعربية ────────────────────────────────────────── */
-    function generateWhatsAppLink(customer) {
-      var cart = getCart();
-      if (cart.length === 0) return null;
-
-      var total = cart.reduce(function (s, i) { return s + i.price * i.quantity; }, 0);
-
-      var msg = "🍯 *طلب جديد — منحل الخطيب*\n";
-      msg += "━━━━━━━━━━━━━━━━━━━━\n\n";
-      msg += "*👤 بيانات العميل*\n";
-      msg += "الاسم: " + customer.name + "\n";
-      msg += "الجوال: " + customer.mobile + "\n";
-      msg += "العنوان: " + customer.address + "\n\n";
-      msg += "*📦 تفاصيل الطلب*\n";
-      cart.forEach(function (item) {
-        var lineTotal = (item.price * item.quantity).toFixed(0);
-        var label = item.nameAr || item.name;
-        var weight = item.weightAr || item.weight || "";
-        msg += "• " + label + (weight ? " (" + weight + ")" : "") + " × " + item.quantity + " — " + lineTotal + " دينار\n";
-      });
-      msg += "\n*💰 الإجمالي: " + total.toFixed(0) + " دينار*\n";
-      msg += "_سيتم تأكيد التوصيل من فريقنا._\n";
-      msg += "\n_أُرسل عبر alkhateebapiary.jo_";
-
-      return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
-    }
-
-    /* ── عرض السلة ─────────────────────────────────────────────────── */
+    /* ── Render cart ─────────────────────────────────────────────────── */
 
     function renderCart() {
       var cart      = getCart();
@@ -321,69 +302,74 @@
       emptyEl.classList.add("hidden");
       contentEl.classList.remove("hidden");
 
+      /* Cart items */
       var itemsEl = document.getElementById("cart-items");
       itemsEl.innerHTML = "";
 
       cart.forEach(function (item) {
-        var lineTotal   = (item.price * item.quantity).toFixed(0);
-        var displayName = item.nameAr || item.name;
-        var displayWt   = item.weightAr || item.weight || "";
+        var lineTotal = (item.price * item.quantity).toFixed(0);
         itemsEl.innerHTML += `
           <div class="cart-item-animate bg-white rounded-2xl border border-amber-100
                       shadow-sm p-4 flex items-center gap-4">
             <span class="text-4xl select-none shrink-0">🍯</span>
             <div class="flex-1 min-w-0">
-              <div class="font-semibold text-stone-900 text-sm truncate">${displayName}</div>
-              <div class="text-xs text-amber-600 font-medium mt-0.5">${displayWt}</div>
-              <div class="text-xs text-stone-400">${item.price} دينار / جرة</div>
+              <div class="font-semibold text-stone-900 text-sm truncate">${item.name}</div>
+              <div class="text-xs text-stone-400 arabic" dir="rtl">${item.nameAr}</div>
+              <div class="text-xs text-amber-600 font-medium mt-0.5">${item.weight || ""}</div>
+              <div class="text-xs text-stone-400">${item.price} JOD / jar</div>
             </div>
+
+            <!-- Qty stepper -->
             <div class="flex items-center border border-stone-200 rounded-full overflow-hidden shrink-0">
-              <button onclick="changeQuantity('${item.cartKey}', 1)"
-                      class="w-7 h-7 flex items-center justify-center text-stone-600
-                             hover:bg-stone-100 transition text-base font-bold leading-none">
-                +
-              </button>
-              <span class="w-8 text-center text-sm font-semibold text-stone-800">
-                ${item.quantity}
-              </span>
               <button onclick="changeQuantity('${item.cartKey}', -1)"
                       class="w-7 h-7 flex items-center justify-center text-stone-600
                              hover:bg-stone-100 transition text-base font-bold leading-none">
                 −
               </button>
+              <span class="w-8 text-center text-sm font-semibold text-stone-800">
+                ${item.quantity}
+              </span>
+              <button onclick="changeQuantity('${item.cartKey}', 1)"
+                      class="w-7 h-7 flex items-center justify-center text-stone-600
+                             hover:bg-stone-100 transition text-base font-bold leading-none">
+                +
+              </button>
             </div>
-            <div class="text-left shrink-0">
-              <div class="font-bold text-amber-700 text-sm">${lineTotal} دينار</div>
+
+            <!-- Line total -->
+            <div class="text-right shrink-0">
+              <div class="font-bold text-amber-700 text-sm">${lineTotal} JOD</div>
               <button onclick="removeFromCart('${item.cartKey}')"
                       class="text-xs text-red-400 hover:text-red-600 transition mt-0.5">
-                حذف
+                Remove
               </button>
             </div>
           </div>
         `;
       });
 
+      /* Summary lines */
       var summaryEl = document.getElementById("summary-lines");
       summaryEl.innerHTML = "";
       var total = 0;
       cart.forEach(function (item) {
-        var lineTotal   = item.price * item.quantity;
-        total          += lineTotal;
-        var displayName = item.nameAr || item.name;
-        var displayWt   = item.weightAr || item.weight || "";
+        var lineTotal = item.price * item.quantity;
+        total += lineTotal;
         summaryEl.innerHTML += `
           <div class="flex justify-between text-stone-600">
-            <span class="font-medium shrink-0 ml-2">${lineTotal.toFixed(0)} دينار</span>
-            <span class="truncate max-w-[60%]">${displayName}${displayWt ? " (" + displayWt + ")" : ""} × ${item.quantity}</span>
+            <span class="truncate max-w-[60%]">
+              ${item.name} ${item.weight ? "(" + item.weight + ")" : ""} × ${item.quantity}
+            </span>
+            <span class="font-medium shrink-0 ml-2">${lineTotal.toFixed(0)} JOD</span>
           </div>
         `;
       });
 
-      document.getElementById("cart-total").textContent = total.toFixed(0) + " دينار";
+      document.getElementById("cart-total").textContent = total.toFixed(0) + " JOD";
       updateCartBadge();
     }
 
-    /* ── التحقق من النموذج والإرسال ─────────────────────────────────── */
+    /* ── Form validation & submit ────────────────────────────────────── */
 
     function handleSubmit(e) {
       e.preventDefault();
@@ -391,33 +377,53 @@
       var name    = document.getElementById("cust-name").value.trim();
       var mobile  = document.getElementById("cust-mobile").value.trim();
       var address = document.getElementById("cust-address").value.trim();
+
       var valid = true;
 
+      /* Name */
       var errName = document.getElementById("err-name");
-      if (!name) { errName.classList.remove("hidden"); valid = false; }
-      else        { errName.classList.add("hidden"); }
+      if (!name) {
+        errName.classList.remove("hidden");
+        valid = false;
+      } else {
+        errName.classList.add("hidden");
+      }
 
+      /* Mobile */
       var errMobile = document.getElementById("err-mobile");
       if (!mobile || mobile.replace(/\D/g, "").length < 9) {
-        errMobile.classList.remove("hidden"); valid = false;
-      } else { errMobile.classList.add("hidden"); }
+        errMobile.classList.remove("hidden");
+        valid = false;
+      } else {
+        errMobile.classList.add("hidden");
+      }
 
+      /* Address */
       var errAddress = document.getElementById("err-address");
       if (!address || address.length < 5) {
-        errAddress.classList.remove("hidden"); valid = false;
-      } else { errAddress.classList.add("hidden"); }
+        errAddress.classList.remove("hidden");
+        valid = false;
+      } else {
+        errAddress.classList.add("hidden");
+      }
 
       if (!valid) return;
 
+      /* Generate WhatsApp link */
       var waLink = generateWhatsAppLink({ name: name, mobile: mobile, address: address });
       if (!waLink) {
-        showToast("السلة فارغة — أضف منتجاً أولاً!");
+        showToast("Your cart is empty — add some honey first!");
         return;
       }
 
+      /* Open WhatsApp in new tab */
       window.open(waLink, "_blank");
+
+      /* Show confirmation modal */
       document.getElementById("order-modal").classList.remove("hidden");
     }
+
+    /* ── Modal helpers ────────────────────────────────────────────────── */
 
     function closeModal() {
       document.getElementById("order-modal").classList.add("hidden");
@@ -427,13 +433,16 @@
       clearCart();
       closeModal();
       renderCart();
+      /* Reset form */
       document.getElementById("checkout-form").reset();
     }
 
+    /* Close modal on backdrop click */
     document.getElementById("order-modal").addEventListener("click", function (e) {
       if (e.target === this) closeModal();
     });
 
+    /* ── Init ────────────────────────────────────────────────────────── */
     document.addEventListener("DOMContentLoaded", renderCart);
 
   </script>
