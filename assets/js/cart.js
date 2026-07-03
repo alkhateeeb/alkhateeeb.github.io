@@ -159,7 +159,7 @@ function generateWhatsAppLink(customer) {
   });
   msg += `\n*💰 Total: ${total.toFixed(0)} JOD*\n`;
   msg += `_Delivery to be confirmed by our team._\n`;
-  msg += `\n_Sent via alkhateebapiary.jo_`;
+  msg += `\n_Sent via apiarycare.com_`;
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
