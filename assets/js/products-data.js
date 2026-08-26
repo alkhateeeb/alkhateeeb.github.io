@@ -8,7 +8,7 @@
  *      < 40  →  🔴 Red    (Order Quickly!)
  *
  * HOW TO UPDATE PRICES / SIZES:
- *   Edit the sizes[] array.  Two entries: 500 g and 1 kg.
+ *   Edit the sizes[] array.  Three entries: 250 g, 500 g, and 1 kg.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
@@ -38,7 +38,8 @@ const PRODUCTS = [
     jarGradient:   "from-amber-100 to-yellow-50",
     plantGradient: "from-amber-50 to-green-50",
     sizes: [
-      { weight: "500g", weightAr: "500 غرام", price: 10 },  // ← EDIT PRICES
+      { weight: "250g", weightAr: "250 غرام", price: 6 },   // ← EDIT PRICES
+      { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
     stockPercent: 22,   // ← EDIT (0–100)
@@ -70,10 +71,11 @@ const PRODUCTS = [
     jarGradient:   "from-purple-50 to-amber-50",
     plantGradient: "from-purple-100 to-purple-50",
     sizes: [
+      { weight: "250g", weightAr: "250 غرام", price: 6 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
-    stockPercent: 75,
+    stockPercent: 55,
     badge: "Seasonal",
     badgeAr: "موسمي",
     badgeColor: "purple",
@@ -102,6 +104,7 @@ const PRODUCTS = [
     jarGradient:   "from-green-50 to-amber-50",
     plantGradient: "from-green-100 to-teal-50",
     sizes: [
+      { weight: "250g", weightAr: "250 غرام", price: 6 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
@@ -134,14 +137,81 @@ const PRODUCTS = [
     jarGradient:   "from-amber-200 to-yellow-100",
     plantGradient: "from-amber-100 to-stone-50",
     sizes: [
+      { weight: "250g", weightAr: "250 غرام", price: 6 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
-    stockPercent: 70,
+    stockPercent: 55,
     badge: "Premium",
     badgeAr: "فاخر",
     badgeColor: "gold",
     images: ["Ballota_1.jpg", "Ballota_2.jpg", "Ballota_3.jpg"],
+  },
+  {
+    id: 5,
+    name: "Eucalyptus & Sidr Honey",
+    nameAr: "عسل الكينا والسدر",
+    tagline: "Rare Blend · Dual-Origin · Therapeutic",
+    taglineAr: "خلطة نادرة · مزدوجة المصدر · علاجية",
+    description:
+      "A rare honey harvested from our own hives, blending the finest of eucalyptus and sidr honey in one jar. This dual-origin honey pairs sidr's mild, woody sweetness with eucalyptus's warm, herbal depth, resulting in a rich, balanced flavour and a smooth, velvety texture. Traditionally valued for its combined respiratory and immune-supporting properties, it's one of our most sought-after limited harvests.",
+    descriptionAr:
+      "عسل نادر حصدناه من مناحلنا الخاصة، يجمع بين أفضل ما يميز عسل السدر وعسل الكينا في جرة واحدة. يوازن هذا العسل مزدوج المصدر بين حلاوة السدر الخشبية المعتدلة ونكهة الكينا العشبية الدافئة، لينتج طعماً غنياً متوازناً وقواماً مخملياً ناعماً. يُعرف تقليدياً بخصائصه الداعمة للجهاز التنفسي والمناعة، ويُعد من أكثر محاصيلنا المحدودة طلباً.",
+    source: "Eucalyptus & Sidr Blend",
+    sourceAr: "خليط الكينا والسدر",
+    sourceDesc: "Dual-origin blend of eucalyptus groves and ancient sidr trees, from our own hives",
+    sourceDescAr: "خليط مزدوج المصدر من اشجار الكينا وأشجار السدر القديمة، من مناحلنا الخاصة",
+    mainFlower:      "Eucalyptus & Sidr (Ziziphus spina-christi)",
+    mainFlowerAr:    "الكينا والسدر",
+    mainFlowerEmoji: "🌿",
+    crystallization:   "slow",
+    crystallizationAr: "يتبلور ببطء",
+    sourcePlantEmoji: "🌳",
+    jarGradient:   "from-amber-200 to-green-50",
+    plantGradient: "from-green-100 to-amber-50",
+    sizes: [
+      { weight: "250g", weightAr: "250 غرام", price: 8 },
+      { weight: "500g", weightAr: "500 غرام", price: 13 },
+      { weight: "1kg",  weightAr: "1 كيلو",   price: 25 },
+    ],
+    stockPercent: 65,
+    badge: "Rare",
+    badgeAr: "نادر",
+    badgeColor: "gold",
+    images: ["eycalptus_1.jpg", "eycalptus_2.jpg", "eycalptus_3.jpg", "sidr-1.jpg", "sidr-2.jpeg"],
+  },
+  {
+    id: 6,
+    name: "Globe Thistle Honey (Echinops Honey)",
+    nameAr: "عسل الأرث",
+    tagline: "Single-Origin · Wild · Herbal",
+    taglineAr: "أحادي المصدر · بري · عشبي",
+    description:
+      "Harvested from wild globe thistle flowers (Echinops) that bloom in arid, sun-drenched landscapes, this rare single-origin honey is prized for its warm amber colour and smooth, viscous texture. It carries a distinctly herbal, floral taste with a well-balanced, mild sweetness and a clean finish, crystallizing slowly to preserve its raw enzymes and nutrients. A true rarity for connoisseurs of wild honey.",
+    descriptionAr:
+      "يُحصد من أزهار الأرث البرية التي تنمو في الأراضي الجافة المشمسة، وهو عسل نادر أحادي المصدر يتميز بلونه العنبري الدافئ وقوامه الناعم اللزج. يحمل نكهة عشبية زهرية مميزة بحلاوة معتدلة متوازنة ومذاق نقي، ويتبلور ببطء للحفاظ على إنزيماته وعناصره الغذائية الخام. عسل نادر يستحق التذوق لعشاق العسل البري الأصيل.",
+    source: "Globe Thistle (Echinops)",
+    sourceAr: "الأرث — Echinops",
+    sourceDesc: "Wild globe thistle flowers from arid, sun-drenched landscapes",
+    sourceDescAr: "أزهار الأرث البرية من الأراضي الجافة المشمسة",
+    mainFlower:      "Globe Thistle (Echinops)",
+    mainFlowerAr:    "زهرة الأرث",
+    mainFlowerEmoji: "🔮",
+    crystallization:   "slow",
+    crystallizationAr: "يتبلور ببطء إلى متوسط",
+    sourcePlantEmoji: "🌾",
+    jarGradient:   "from-amber-100 to-stone-50",
+    plantGradient: "from-stone-100 to-amber-50",
+    sizes: [
+      { weight: "250g", weightAr: "250 غرام", price: 6 },
+      { weight: "500g", weightAr: "500 غرام", price: 10 },
+      { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
+    ],
+    stockPercent: 80,
+    badge: "New",
+    badgeAr: "جديد",
+    badgeColor: "amber",
+    images: ["globe-th.jpeg", "globe-th.mp4"],
   },
 ];
 
