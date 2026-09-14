@@ -40,6 +40,12 @@ function addToCart(productId, quantity, sizeIndex) {
   const cart    = getCart();
   const product = PRODUCTS.find((p) => p.id === productId);
   if (!product) return;
+  if (!product.stockPercent || product.stockPercent <= 0) {
+    if (typeof showToast === "function") {
+      showToast(`⛔ ${product.nameAr || product.name} نفذت الكمية`);
+    }
+    return;
+  }
 
   const size    = product.sizes[sizeIndex];
   if (!size) return;

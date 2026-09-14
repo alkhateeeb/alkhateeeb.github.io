@@ -334,10 +334,12 @@
               }).join('')}
             </div>
 
-            <button onclick="addToCart(${p.id}, 1, homeSizeState[${p.id}] || 0)"
-                    class="w-full bg-amber-600 hover:bg-amber-500 active:scale-95 text-white
-                           text-xs font-semibold py-2 rounded-full transition">
-              + Add to Cart
+            <button onclick="addToCart(${p.id}, 1, homeSizeState[${p.id}] || 0)" ${p.stockPercent <= 0 ? "disabled" : ""}
+                    class="w-full text-xs font-semibold py-2 rounded-full transition
+                           ${p.stockPercent <= 0
+                             ? "bg-stone-200 text-stone-400 cursor-not-allowed"
+                             : "bg-amber-600 hover:bg-amber-500 active:scale-95 text-white"}">
+              ${p.stockPercent <= 0 ? "Sold Out" : "+ Add to Cart"}
             </button>
           </div>
         </div>

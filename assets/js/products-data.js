@@ -42,10 +42,10 @@ const PRODUCTS = [
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
-    stockPercent: 22,   // ← EDIT (0–100)
-    badge: "Bestseller",
-    badgeAr: "الأكثر مبيعاً",
-    badgeColor: "amber",
+    stockPercent: 0,   // ← EDIT (0–100)
+    badge: "Sold Out",
+    badgeAr: "نفذت الكمية",
+    badgeColor: "red",
     images: ["spring_1.jpg", "spring_2.jpg", "spring_3.jpg", "spring_5.jpg"],
   },
   {
@@ -65,8 +65,8 @@ const PRODUCTS = [
     mainFlower:      "Centaurea / Cornflower (Centaurea calcitrapa)",
     mainFlowerAr:    "زهرة القنطريون (المرار)",
     mainFlowerEmoji: "💜",
-    crystallization:   "slow",
-    crystallizationAr: "يتبلور ببطء",
+    crystallization:   "medium",
+    crystallizationAr: "يتبلور بمعدل متوسط",
     sourcePlantEmoji: "💜",
     jarGradient:   "from-purple-50 to-amber-50",
     plantGradient: "from-purple-100 to-purple-50",
@@ -108,7 +108,7 @@ const PRODUCTS = [
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
-    stockPercent: 70,
+    stockPercent: 80,
     badge: "Low Stock",
     badgeAr: "مخزون محدود",
     badgeColor: "red",
@@ -174,10 +174,10 @@ const PRODUCTS = [
       { weight: "500g", weightAr: "500 غرام", price: 13 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 25 },
     ],
-    stockPercent: 65,
-    badge: "Rare",
-    badgeAr: "نادر",
-    badgeColor: "gold",
+    stockPercent: 15,
+    badge: "Bestseller",
+    badgeAr: "الأكثر مبيعاً",
+    badgeColor: "amber",
     images: ["eycalptus_1.jpg", "eycalptus_2.jpg", "eycalptus_3.jpg", "sidr-1.jpg", "sidr-2.jpeg"],
   },
   {
@@ -238,16 +238,18 @@ function getAvailability(stockPercent) {
 
 /**
  * Returns display metadata for crystallization rate.
- * @param {"fast"|"slow"|"never"} type
+ * @param {"fast"|"medium"|"slow"|"never"} type
  */
 function getCrystallizationStyle(type) {
   const map = {
-    fast:  { icon: "❄️", label: "Crystallizes Fast",   labelAr: "يتبلور سريعاً",
-             textColor: "text-blue-600",   bgColor: "bg-blue-50",   borderColor: "border-blue-100" },
-    slow:  { icon: "🔮", label: "Crystallizes Slowly", labelAr: "يتبلور ببطء",
-             textColor: "text-purple-600", bgColor: "bg-purple-50", borderColor: "border-purple-100" },
-    never: { icon: "💧", label: "Stays Liquid",         labelAr: "لا يتبلور",
-             textColor: "text-teal-600",   bgColor: "bg-teal-50",   borderColor: "border-teal-100" },
+    fast:   { icon: "❄️", label: "Crystallizes Fast",   labelAr: "يتبلور سريعاً",
+              textColor: "text-blue-600",   bgColor: "bg-blue-50",   borderColor: "border-blue-100" },
+    medium: { icon: "🌤️", label: "Crystallizes Medium", labelAr: "يتبلور بمعدل متوسط",
+              textColor: "text-amber-600",  bgColor: "bg-amber-50",  borderColor: "border-amber-100" },
+    slow:   { icon: "🔮", label: "Crystallizes Slowly", labelAr: "يتبلور ببطء",
+              textColor: "text-purple-600", bgColor: "bg-purple-50", borderColor: "border-purple-100" },
+    never:  { icon: "💧", label: "Stays Liquid",         labelAr: "لا يتبلور",
+              textColor: "text-teal-600",   bgColor: "bg-teal-50",   borderColor: "border-teal-100" },
   };
   return map[type] || map.slow;
 }

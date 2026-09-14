@@ -317,20 +317,23 @@
 
             <!-- الكمية + إضافة للسلة -->
             <div class="flex items-center gap-3">
-              <button onclick="addWithQty(${p.id})"
-                      class="flex-1 bg-amber-600 hover:bg-amber-500 active:scale-95 text-white
-                             font-semibold py-2.5 rounded-full transition text-sm">
-                أضف للسلة
+              <button onclick="addWithQty(${p.id})" ${p.stockPercent <= 0 ? "disabled" : ""}
+                      class="flex-1 font-semibold py-2.5 rounded-full transition text-sm
+                             ${p.stockPercent <= 0
+                               ? "bg-stone-200 text-stone-400 cursor-not-allowed"
+                               : "bg-amber-600 hover:bg-amber-500 active:scale-95 text-white"}">
+                ${p.stockPercent <= 0 ? "نفذت الكمية" : "أضف للسلة"}
               </button>
-              <div class="flex items-center border border-stone-200 rounded-full overflow-hidden shrink-0">
-                <button onclick="adjustQty(${p.id}, 1)"
+              <div class="flex items-center border border-stone-200 rounded-full overflow-hidden shrink-0
+                          ${p.stockPercent <= 0 ? "opacity-40 pointer-events-none" : ""}">
+                <button onclick="adjustQty(${p.id}, 1)" ${p.stockPercent <= 0 ? "disabled" : ""}
                         class="w-8 h-8 flex items-center justify-center text-stone-600
                                hover:bg-stone-100 transition text-lg font-bold leading-none">+</button>
-                <input id="qty-${p.id}" type="number" value="1" min="1" max="99"
+                <input id="qty-${p.id}" type="number" value="1" min="1" max="99" ${p.stockPercent <= 0 ? "disabled" : ""}
                        oninput="onQtyInput(${p.id}, this.value)"
                        class="qty-input w-10 h-8 text-center text-sm font-semibold
                               border-x border-stone-200 bg-white focus:outline-none"/>
-                <button onclick="adjustQty(${p.id}, -1)"
+                <button onclick="adjustQty(${p.id}, -1)" ${p.stockPercent <= 0 ? "disabled" : ""}
                         class="w-8 h-8 flex items-center justify-center text-stone-600
                                hover:bg-stone-100 transition text-lg font-bold leading-none">−</button>
               </div>
