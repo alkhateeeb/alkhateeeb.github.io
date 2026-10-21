@@ -221,7 +221,7 @@
 
     var grid = document.getElementById("products-grid");
 
-    PRODUCTS.forEach(function (p) {
+    PRODUCTS.filter(function (p) { return !p.hidden; }).forEach(function (p) {
       qtyState[p.id]  = 1;
       sizeState[p.id] = 0;
       var avail = getAvailability(p.stockPercent);
