@@ -38,7 +38,7 @@ const PRODUCTS = [
     jarGradient:   "from-amber-100 to-yellow-50",
     plantGradient: "from-amber-50 to-green-50",
     sizes: [
-      { weight: "250g", weightAr: "250 غرام", price: 6 },   // ← EDIT PRICES
+      { weight: "250g", weightAr: "250 غرام", price: 7 },   // ← EDIT PRICES
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
@@ -71,7 +71,7 @@ const PRODUCTS = [
     jarGradient:   "from-purple-50 to-amber-50",
     plantGradient: "from-purple-100 to-purple-50",
     sizes: [
-      { weight: "250g", weightAr: "250 غرام", price: 6 },
+      { weight: "250g", weightAr: "250 غرام", price: 7 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
@@ -104,7 +104,7 @@ const PRODUCTS = [
     jarGradient:   "from-green-50 to-amber-50",
     plantGradient: "from-green-100 to-teal-50",
     sizes: [
-      { weight: "250g", weightAr: "250 غرام", price: 6 },
+      { weight: "250g", weightAr: "250 غرام", price: 7 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
@@ -137,7 +137,7 @@ const PRODUCTS = [
     jarGradient:   "from-amber-200 to-yellow-100",
     plantGradient: "from-amber-100 to-stone-50",
     sizes: [
-      { weight: "250g", weightAr: "250 غرام", price: 6 },
+      { weight: "250g", weightAr: "250 غرام", price: 7 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
@@ -203,7 +203,7 @@ const PRODUCTS = [
     jarGradient:   "from-amber-100 to-stone-50",
     plantGradient: "from-stone-100 to-amber-50",
     sizes: [
-      { weight: "250g", weightAr: "250 غرام", price: 6 },
+      { weight: "250g", weightAr: "250 غرام", price: 7 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
@@ -237,7 +237,7 @@ const PRODUCTS = [
     jarGradient:   "from-purple-100 to-amber-50",
     plantGradient: "from-amber-100 to-purple-50",
     sizes: [
-      { weight: "250g", weightAr: "250 غرام", price: 6 },
+      { weight: "250g", weightAr: "250 غرام", price: 7 },
       { weight: "500g", weightAr: "500 غرام", price: 10 },
       { weight: "1kg",  weightAr: "1 كيلو",   price: 20 },
     ],
